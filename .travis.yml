@@ -1,0 +1,19 @@
+language: groovy
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+install:
+  - TERM=dumb ./gradlew -q assemble --stacktrace
+
+script:
+  - TERM=dumb ./gradlew check --stacktrace
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
