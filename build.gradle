@@ -22,7 +22,7 @@ pluginBundle {
     website = 'https://github.com/kdabir/mksrc'
     vcsUrl = 'https://github.com/kdabir/mksrc'
     description = 'Gradle plugin'
-    tags = ['gradle', 'plugin']
+    tags = ['create', 'dirs', 'mkdir', 'sourcesets']
 
     plugins {
         mksrc {
