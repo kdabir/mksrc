@@ -28,3 +28,19 @@ Based on the plugins applied to project (and configured `sourceSets`), the sourc
     └── test
         ├── java
         └── resources
+
+
+
+
+## For multi-project builds
+
+If top level project doesn't need source dirs, but subprojects do then use `apply false` in `plugins` block and apply the plugin to all subprojects. Basically using the following snippet should work:
+
+
+plugins {
+	id "com.kdabir.mksrc" version "1.0.0" apply false
+}
+
+subprojects {
+	apply plugin: 'com.kdabir.mksrc'
+}
