@@ -55,5 +55,4 @@ scmVersion {
 }
 
 tasks.publishPlugins.mustRunAfter('release')
-
-task publish(dependsOn: ['release', 'publishPlugins'])
+tasks.publish.dependsOn('release')
