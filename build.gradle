@@ -56,6 +56,3 @@ scmVersion {
 
 project.version = scmVersion.version
 
-
-tasks.publishPlugins.mustRunAfter('release')
-tasks.publish.dependsOn('release', 'publishPlugins')
