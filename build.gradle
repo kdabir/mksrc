@@ -3,8 +3,10 @@ plugins {
     id 'maven-publish'
     id 'java-gradle-plugin'
     id 'com.gradle.plugin-publish' version '0.9.10'
-    id 'net.researchgate.release' version '2.6.0'
+    id "pl.allegro.tech.build.axion-release" version "1.9.3"    
 }
+
+group = "com.kdabir.mksrc"
 
 repositories {
     jcenter()
@@ -32,4 +34,26 @@ pluginBundle {
     }
 }
 
-afterReleaseBuild.dependsOn tasks.publishPlugins
+scmVersion {
+    tag {
+        prefix = 'v'
+        versionSeparator = ''
+    }
+    
+    localOnly = true
+
+    hooks {
+        post { context ->
+            /// Pushing tags manually thru native git client because jgit requires authentication via a pop-up
+            println "pushing tag: v${context.currentVersion}"
+
+            exec {
+                commandLine 'git', 'push', 'origin', "v${context.currentVersion}"
+            }
+        }
+    }
+}
+
+tasks.publishPlugins.mustRunAfter('release')
+
+task publish(dependsOn: ['release', 'publishPlugins'])
