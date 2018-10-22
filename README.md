@@ -39,11 +39,11 @@ If the top level project doesn't need source dirs, but the subprojects do, then 
 
 ```
 plugins {
-	id "com.kdabir.mksrc" version "1.0.0" apply false
+  id "com.kdabir.mksrc" version "1.0.0" apply false
 }
 
 subprojects {
-    apply plugin: 'com.kdabir.mksrc'
+  apply plugin: 'com.kdabir.mksrc'
 }
 ```
 
