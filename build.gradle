@@ -3,7 +3,8 @@ plugins {
     id 'maven-publish'
     id 'java-gradle-plugin'
     id 'com.gradle.plugin-publish' version '0.9.10'
-    id "pl.allegro.tech.build.axion-release" version "1.9.3"    
+    id "pl.allegro.tech.build.axion-release" version "1.9.3"
+    id "com.github.ben-manes.versions" version "0.24.0"
 }
 
 group = "com.kdabir.mksrc"
@@ -39,7 +40,7 @@ scmVersion {
         prefix = 'v'
         versionSeparator = ''
     }
-    
+
     localOnly = true
 
     hooks {
