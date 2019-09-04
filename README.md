@@ -5,7 +5,7 @@
 
 ![Gradle Plugin](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/gradle/plugin/com/kdabir/mksrc/mksrc/maven-metadata.xml?color=blue&label=Gradle%20Plugin)
 
-Create source directory structure as per the applied plugins (`java`, `groovy`, `scala`, `war`)
+Creates source directory structure as per the applied plugins (`java`, `groovy`, `kotlin`, `scala`, `war`) and custom `sourceSet` dirs
 
 ## Usage
 
