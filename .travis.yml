@@ -15,5 +15,5 @@ script:
   - TERM=dumb ./gradlew check --stacktrace
 
 jdk:
-  - oraclejdk8
-  - oraclejdk9
+  - openjdk11
+  - openjdk12
