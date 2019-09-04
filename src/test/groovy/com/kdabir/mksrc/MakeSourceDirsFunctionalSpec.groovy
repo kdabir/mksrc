@@ -21,14 +21,14 @@ class MakeSourceDirsFunctionalSpec extends Specification {
     }
 
     def "warns for no source sets"() {
-        given: "failed tests file already do not exist"
+        given:
         new File(testProject, "build.gradle").text = """\
         plugins {
             id "com.kdabir.mksrc"
         }
         """
 
-        when: "running the build expecting failure"
+        when:
         def result = runTask()
 
         then:
@@ -37,7 +37,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
     }
 
     def "creates dirs java"() {
-        given: "failed tests file already do not exist"
+        given:
         new File(testProject, "build.gradle").text = """\
         plugins {
             id 'java'
@@ -45,7 +45,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
         }
         """
 
-        when: "running the build expecting failure"
+        when:
         def result = runTask()
 
         then:
@@ -53,7 +53,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
     }
 
     def "creates for webapp"() {
-        given: "failed tests file already do not exist"
+        given:
         new File(testProject, "build.gradle").text = """\
         plugins {
             id 'java'
@@ -62,7 +62,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
         }
         """
 
-        when: "running the build expecting failure"
+        when:
         def result = runTask()
 
         then:
@@ -71,7 +71,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
 
 
     def "creates for groovy"() {
-        given: "failed tests file already do not exist"
+        given:
         new File(testProject, "build.gradle").text = """\
         plugins {
             id 'groovy'
@@ -79,7 +79,7 @@ class MakeSourceDirsFunctionalSpec extends Specification {
         }
         """
 
-        when: "running the build expecting failure"
+        when:
         def result = runTask()
 
         then:

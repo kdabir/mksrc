@@ -8,5 +8,6 @@ class MakeSourceDirsPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         project.tasks.create('makeSourceDirs', MakeSourceDirsTask)
+        project.tasks.create('generateSettingsFile', GenerateSettingsFileTask)
     }
 }

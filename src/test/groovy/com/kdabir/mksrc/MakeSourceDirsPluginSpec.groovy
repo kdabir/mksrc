@@ -12,9 +12,10 @@ class MakeSourceDirsPluginSpec extends Specification {
         project.pluginManager.apply MakeSourceDirsPlugin
     }
 
-    def "applying plugin adds task"() {
+    def "applying plugin adds tasks"() {
         expect:
         project.getTasksByName("makeSourceDirs", false).first() instanceof MakeSourceDirsTask
+        project.getTasksByName("generateSettingsFile", false).first() instanceof GenerateSettingsFileTask
     }
 
 }
