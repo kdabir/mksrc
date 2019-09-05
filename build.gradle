@@ -28,8 +28,8 @@ dependencies {
 pluginBundle {
     website = 'https://github.com/kdabir/mksrc'
     vcsUrl = 'https://github.com/kdabir/mksrc'
-    description = 'Gradle plugin'
-    tags = ['create', 'dirs', 'mkdir', 'sourcesets']
+    description = 'Generate source directories and settings.gradle file'
+    tags = ['create', 'dirs', 'mkdir', 'sourcesets', 'settings.gradle']
 
     plugins {
         mksrc {
