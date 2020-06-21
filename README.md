@@ -10,7 +10,7 @@
 Apply the plugin to the project
 
     plugins {
-      id "com.kdabir.mksrc" version "1.0.1"
+      id "com.kdabir.mksrc" version "1.1.0"
     }
 
 
@@ -41,7 +41,7 @@ should work :
 
 ```
 plugins {
-  id "com.kdabir.mksrc" version "1.0.0" apply false
+  id "com.kdabir.mksrc" version "1.1.0" apply false
 }
 
 subprojects {
