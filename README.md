@@ -1,7 +1,5 @@
 # Make Source Dirs Gradle Plugin
 
-[![Build Status](https://travis-ci.org/kdabir/mksrc.svg?branch=master)](https://travis-ci.org/kdabir/mksrc)
-
 [![Gradle Plugin](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/gradle/plugin/com/kdabir/mksrc/mksrc/maven-metadata.xml?color=blue&label=GradlePlugin)](https://plugins.gradle.org/plugin/com.kdabir.mksrc)
 
 1. Creates source directory structure as per the applied plugins (`java`, `groovy`, `kotlin`, `scala`, `war`) and custom `sourceSet` dirs
