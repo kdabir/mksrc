@@ -14,13 +14,13 @@ repositories {
 }
 
 dependencies {
-    compile localGroovy()
+    implementation localGroovy()
 
-    testCompile 'org.spockframework:spock-core:1.3-groovy-2.5', {
+    testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5', {
         exclude group: 'org.codehaus.groovy'
     }
 
-    testCompile "io.github.kdabir.directree:directree:0.3.2", {
+    testImplementation "io.github.kdabir.directree:directree:0.3.2", {
         exclude group: 'org.codehaus.groovy'
     }
 }
