@@ -19,6 +19,5 @@ class MakeSourceDirsTask extends DefaultTask {
         } else {
             project.logger.warn("No sourceSets found. Please apply a language plugin")
         }
-
     }
 }

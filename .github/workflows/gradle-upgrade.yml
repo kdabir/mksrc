@@ -3,19 +3,16 @@
 name: Upgrade Gradle
 
 on:
-  push:
-    branches: [ master ]  
-
   schedule:
     - cron: 0 8 * * 3
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Run a one-line script
       run: |
         LATEST_VER=$(curl https://api.github.com/repos/gradle/gradle/releases/latest | jq -r .name)
