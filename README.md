@@ -1,6 +1,8 @@
 # Make Source Dirs Gradle Plugin
 
-[![Gradle Plugin](https://img.shields.io/maven-metadata/v/https/plugins.gradle.org/m2/gradle/plugin/com/kdabir/mksrc/mksrc/maven-metadata.xml?color=blue&label=GradlePlugin)](https://plugins.gradle.org/plugin/com.kdabir.mksrc)
+[![Gradle Plugin](https://img.shields.io/maven-metadata/v?color=green&label=Gradle%20Plugin&logo=Gradle&metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom.kdabir.mksrc%2Fmksrc%2Fmaven-metadata.xml)](https://plugins.gradle.org/plugin/com.kdabir.mksrc)
+
+
 
 1. Creates source directory structure as per the applied plugins (`java`, `groovy`, `kotlin`, `scala`, `war`) and custom `sourceSet` dirs
 2. Automatically generate / updates `settings.gradle` file to include child projects based on convention
@@ -10,7 +12,7 @@
 Apply the plugin to the project
 
     plugins {
-      id "com.kdabir.mksrc" version "1.1.0"
+      id "com.kdabir.mksrc" version "1.1.1"
     }
 
 
@@ -23,8 +25,8 @@ Based on the plugins applied to project (and configured `sourceSets`), the sourc
     $ tree src
     src
     ├── main
-    │   ├── java
-    │   └── resources
+    │   ├── java
+    │   └── resources
     └── test
         ├── java
         └── resources
@@ -41,7 +43,7 @@ should work :
 
 ```
 plugins {
-  id "com.kdabir.mksrc" version "1.1.0" apply false
+  id "com.kdabir.mksrc" version "1.1.1" apply false
 }
 
 subprojects {
