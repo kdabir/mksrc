@@ -5,16 +5,6 @@ import org.gradle.api.tasks.TaskAction
 
 class MakeSourceDirsTask extends DefaultTask {
 
-    @Override
-    String getGroup() {
-        "Build Setup"
-    }
-
-    @Override
-    String getDescription() {
-        "Generates source directories for the project."
-    }
-
     @TaskAction
     def makeSourceDirs() {
         project.logger.info('creating source dirs...')

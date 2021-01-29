@@ -7,16 +7,6 @@ class GenerateSettingsFileTask extends DefaultTask {
 
     final static String warning = "/* >>> Auto-generated section - Do not edit below this <<< */"
 
-    @Override
-    String getGroup() {
-        "Build Setup"
-    }
-
-    @Override
-    String getDescription() {
-        "Generates settings.gradle for the project"
-    }
-
     @TaskAction
     def generate() {
         project.logger.info('creating settings.gradle...')
